@@ -7,7 +7,7 @@ MAINTAINER Duan Li <inputx@goodays.com>
 
 
 RUN yum --enablerepo=extras install epel-release -y && \
-	yum install unzip nginx openssl -y && \
+	yum install unzip git nginx openssl -y && \
 	yum clean all &&\
 	rm -rf /var/cache/yum
 
