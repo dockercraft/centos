@@ -16,8 +16,8 @@ RUN groupadd -g ${MY_GID} -r ${MY_GROUP} && \
 	yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm -y && \
 	yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y && \
 	yum install unzip git yum-utils -y && \
-	yum-config-manager --enable remi-php72 && \
-	yum install  php php-cli php-fpm php-common php0json php-ldap php-mbstring php-gd php-bcmath php-opcache php-odbc php-soap php-xml php-xmlrpc php-pgsql php-pdo php-pecl-xdebug composer.noarch -y && \
+	yum-config-manager --enable remi-php56 && \
+	yum install php php-cli php-fpm php-common php-json php-ldap php-mbstring php-gd php-bcmath php-opcache php-odbc php-soap php-xml php-xmlrpc php-pgsql php-pdo php-pecl-xdebug composer.noarch -y && \
 	yum clean all && \
 	rm -rf /var/cache/yum && \
 	composer global require "hirak/prestissimo" -v && \
